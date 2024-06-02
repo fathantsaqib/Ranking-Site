@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="center"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_countryy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#23338C"
+        android:visibility="gone"
+        app:title="UEFACountryRanking"
+        app:titleTextColor="@color/white" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_clubb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#23338C"
+        android:visibility="gone"
+        app:title="UEFAClubRanking"
+        app:titleTextColor="@color/white" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_userr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="10dp"
+        android:background="@drawable/bg_search"
+        app:queryHint="search club"
+        app:iconifiedByDefault="false"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/rank_item"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+</LinearLayout>
